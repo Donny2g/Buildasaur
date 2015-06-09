@@ -14,6 +14,8 @@ public class XcodeServerConfig : JSONSerializable {
     public let host: String
     public let user: String?
     public let password: String?
+    public let port: Int = 20543
+    public let version: Int = 2 //currently supported, each response has a header X-XCSAPIVersion: 3...
 
     public var availabilityState: AvailabilityCheckState
 

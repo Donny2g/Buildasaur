@@ -30,7 +30,7 @@ public class XcodeServerEndPoints {
     
     private func endpointURL(endpoint: Endpoint, params: [String: String]? = nil) -> String {
         
-        let base = "/xcode/api"
+        let base = "/xcode/internal/api"
         
         switch endpoint {
             
@@ -98,7 +98,7 @@ public class XcodeServerEndPoints {
         
         let endpointURL = self.endpointURL(endpoint, params: params)
         let queryString = HTTP.stringForQuery(query)
-        let wholePath = "\(self.serverConfig.host)\(endpointURL)\(queryString)"
+        let wholePath = "\(self.serverConfig.host):\(self.serverConfig.port)\(endpointURL)\(queryString)"
         
         if let url = NSURL(string: wholePath) {
             
