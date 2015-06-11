@@ -30,7 +30,7 @@ public class XcodeServerEndPoints {
     
     private func endpointURL(endpoint: Endpoint, params: [String: String]? = nil) -> String {
         
-        let base = "/xcode/internal/api"
+        let base = "/api"
         
         switch endpoint {
             
